@@ -182,6 +182,11 @@ function math.Approach( cur, target, inc )
 	return target
 end
 
+-- Get sign of a number
+function math.sign( num )
+	return ( num > 0 && 1 ) or ( num < 0 && -1 ) or 0
+end
+
 function math.NormalizeAngle( a )
 	return ( a + 180 ) % 360 - 180
 end
@@ -267,3 +272,4 @@ function math.IsNearlyEqual( a, b, tolerance )
 
 	return math.abs( a - b ) <= tolerance
 end
+
